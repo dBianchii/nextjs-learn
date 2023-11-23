@@ -16,7 +16,7 @@ async function ExampleOne() {
   );
   const buenosAires = (await response.json()) as {
     datetime: string;
-  };
+  };  
   const response2 = await fetch(
     "http://worldtimeapi.org/api/timezone/Africa/Cairo"
   );
@@ -47,15 +47,12 @@ async function ExampleOne() {
 async function ExampleTwo() {
   const response = await fetch(
     "http://worldtimeapi.org/api/timezone/America/Argentina/Buenos_Aires",
-    {
-      cache: "no-store",
-    }
   );
   const buenosAires = (await response.json()) as {
     datetime: string;
   };
   const response2 = await fetch(
-    "http://worldtimeapi.org/api/timezone/Africa/Cairo"
+    "http://worldtimeapi.org/api/timezone/Africa/Cairo",
   );
   const africaCairo = (await response2.json()) as {
     datetime: string;

@@ -17,10 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} bg-stone-900 text-white`}>
         <Header />
-
+        <main>
         {children}
+        </main>
       </body>
     </html>
   );
@@ -32,6 +33,7 @@ function Header() {
       <h1 className="text-2xl font-bold">Next.js learn</h1>
       <nav className="space-x-4">
         <Link href="/">Home</Link>
+        <Link href="/static">Static</Link>
         <Link href="/segment1">Segment1</Link>
       </nav>
     </header>
